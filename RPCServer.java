@@ -41,15 +41,19 @@ class RPCServer
             }
             else if(methodName.equalsIgnoreCase("sub"))
             {
-                result= "" + sub(val1,val2);
+                result = "" + sub(val1,val2);
             }
             else if(methodName.equalsIgnoreCase("mul"))
             {
-                result= "" + mul(val1,val2);
+                result = "" + mul(val1,val2);
             }
             else if(methodName.equalsIgnoreCase("div"))
             {
-                result= "" + div(val1,val2);
+                result = "" + div(val1,val2);
+            }
+            else if(methodName.equalsIgnoreCase("mod"))
+            {
+                result = "" + mod(val1,val2);
             }
             byte b1[]=result.getBytes();
             DatagramSocket ds1 = new DatagramSocket();
@@ -78,6 +82,10 @@ class RPCServer
     public float div(float val3, float val4)
     {
         return val3/val4;
+    }
+    public float mod(float val3, float val4)
+    {
+        return val3%val4;
     }
     public static void main(String[] args)
     {
