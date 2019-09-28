@@ -21,7 +21,7 @@ class RPCClient
                 dp = new DatagramPacket(b,b.length);
                 ds1.receive(dp);
                 String s = new String(dp.getData(),0,dp.getLength());
-                System.out.println("\nResultado =" + s +"\n");
+                System.out.println("\nResultado = " + s +"\n");
 
             }
 
