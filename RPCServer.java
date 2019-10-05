@@ -46,9 +46,9 @@ class RPCServer
             {
                 result+= String.valueOf(sub(val1,val2));
             }
-            else if(methodName.equalsIgnoreCase("mul"))
+            else if(methodName.equalsIgnoreCase("mult"))
             {
-                result+=String.valueOf(mul(val1,val2));
+                result+=String.valueOf(mult(val1,val2));
             }
             else if(methodName.equalsIgnoreCase("div"))
             {
@@ -83,7 +83,7 @@ class RPCServer
     {
         return val3-val4;
     }
-    public float mul(float val3, float val4)
+    public float mult(float val3, float val4)
     {
         return val3*val4;
     }
